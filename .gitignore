@@ -1,0 +1,16 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Credential files (just in case)
+.ssh/
+.aws/
+.gcloud/
+*.local
+*.secret
+*.key
+*.pem
+
+# Stow backup files
+*~
+*.stowbak

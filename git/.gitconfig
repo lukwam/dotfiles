@@ -1,0 +1,25 @@
+[user]
+	name = Lukas Karlsson
+	email = karlsson@altissimo.io
+	signingkey = 769340AFEFD5FC5A
+
+[commit]
+	gpgsign = true
+
+[pull]
+	rebase = false
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+#[url "ssh://git@github.com/"]
+#	insteadOf = https://github.com/
+
+# [core]
+# 	hooksPath = /home/karlsson/.git-hooks
+
+[include]
+        path = ~/.gitconfig.local
