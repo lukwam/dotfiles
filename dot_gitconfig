@@ -18,7 +18,8 @@
 #[url "ssh://git@github.com/"]
 #	insteadOf = https://github.com/
 
-# [core]
+[core]
+	excludesFile = ~/.gitignore_global
 # 	hooksPath = /home/karlsson/.git-hooks
 
 [include]
