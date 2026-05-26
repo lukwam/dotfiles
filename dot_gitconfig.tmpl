@@ -1,7 +1,17 @@
 [user]
 	name = Lukas Karlsson
 	email = karlsson@altissimo.io
+{{- if eq .chezmoi.hostname "lukwamsacstudio" }}
+	signingkey = 80D9566828D8BC61
+{{- else if eq .chezmoi.hostname "mac" }}
+	signingkey = 19058B25E76925E2
+{{- else if eq .chezmoi.hostname "karlsson" }}
 	signingkey = 769340AFEFD5FC5A
+{{- else if .signingkey }}
+	signingkey = {{ .signingkey }}
+{{- else }}
+	signingkey = 769340AFEFD5FC5A
+{{- end }}
 
 [commit]
 	gpgsign = true
